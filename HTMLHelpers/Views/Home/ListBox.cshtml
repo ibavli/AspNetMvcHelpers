@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "ListBox";
+}
+
+<h2>ListBox</h2>
+
+
+@Html.ListBox("Seçiniz",
+    new[]
+    {
+        new SelectListItem
+        {
+            Text = "O mu",
+            Value = "1"
+        },
+        new SelectListItem
+        {
+            Text = "Bu mu",
+            Value = "2"
+        },
+         new SelectListItem
+        {
+            Text = "Şu mu",
+            Value = "2"
+        }
+    })
+

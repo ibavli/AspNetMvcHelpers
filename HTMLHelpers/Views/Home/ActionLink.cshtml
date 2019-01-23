@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "ActionLink";
+}
+
+<h3 align="center">Link Oluşturma (ActionLink)</h3>
+
+<p>Aynı controller içinde gideceksek</p>
+@Html.ActionLink("Derslerime Git", "Derslerim")
+
+<p>Farklı controller'a gideceksek</p>
+@Html.ActionLink("Mesaj Gönder", "MesajGonder", "MesajIslemleri")
+
+<p>Id'si 2 olan mesajın detayına gitmek için</p>
+@Html.ActionLink("Mesaj Detayı", "MesajDetay", "MesajIslemleri", new { Id = 2 }, null)
+
+<p>Farklı controller içerisindeki bir actiona yönlenen linkin renginin kırmızı ve fontunun kalın olması</p>
+@Html.ActionLink("Mesaj Gönder", "MesajGonder", "MesajIslemleri", null, new { @style = "color:red; font-weight:bold;" })
+
+
+<style type="text/css">
+    .myStyle {
+        color: red;
+        font-weight: bold;
+    }
+</style>
+<p>CSS Sınıfı vererek </p>
+@Html.ActionLink("Mesaj Gönder", "MesajGonder", "MesajIslemleri", null, new { @class = "myStyle" })
+

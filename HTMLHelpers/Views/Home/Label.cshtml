@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Label";
+}
+
+<h2>Label</h2>
+
+<p>Sadece expression tanımlı</p>
+@Html.Label("OgretimenAdi")
+
+<p>görünecek yazıyı da tanımladık</p>
+@Html.Label("OgretimenAdi", "Öğretmenin Adı")
+
+<p>style verilmiş hali</p>
+@Html.Label("OgretimenAdi", "Öğretmenin Adı", new { @style = "color:red; font-style:italic;" })
+
+
+
+

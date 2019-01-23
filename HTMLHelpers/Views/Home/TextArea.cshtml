@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "TextArea";
+}
+
+<h2>TextArea</h2>
+
+<p>TextArea</p>
+<br />
+@Html.TextArea("Aciklama")
+
+<p>TextArea style ile</p>
+<br />
+@Html.TextArea("Aciklama", new { @style = "color:red; font-style:italic;" })
+
+<p>TextArea bir değer atama</p>
+<br />
+@Html.TextArea("Aciklama", "açıklama giriniz...", new { @style = "color:red; font-style:bold;" })
+
+
+<p>TextArea 5 satır 50 sütun</p>
+<br />
+@Html.TextArea("Aciklama", "açıklama giriniz...", 5, 50, new { @style = "color:red; font-style:bold;" })

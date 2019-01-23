@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "BeginForm";
+}
+
+<p style="font-weight:bold;">Parametresiz BeginForm</p>
+using (Html.BeginForm())<br />
+{<br />
+<br />
+}<br /><br />
+
+ <p style="font-weight:bold;">Home controllerdaki, Gonderdim metoduna gider.</p>
+using (Html.BeginForm("Gonderdim", "Home"))<br />
+{<br />
+ <br />
+}<br />
+
+ <p style="font-weight:bold;">Home controllerdaki, ParametreliGonderdim metoduna Id parametresi ile gider.</p>
+using (Html.BeginForm("ParametreliGonderdim", "Home", new { Id = 2}, FormMethod.Post))<br />
+{<br />
+ <br />
+}<br />
+
+<p style="font-weight:bold;">Style verilmiş hali</p>
+@using (Html.BeginForm("ParametreliGonderdim", "Home", FormMethod.Post, new { @style = "border-color:black; border-width:2px; border-style:solid;"}))
+{
+    <b>Kenarında çizgi oldu</b><br />
+}

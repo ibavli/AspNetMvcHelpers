@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "RadioButton";
+}
+
+<h2>RadioButton</h2>
+
+<p>Soru1</p>
+@Html.RadioButton("soru1", "A") A
+<br />
+@Html.RadioButton("soru1", "B") B
+<br />
+<br />
+<p>Soru2</p>
+@Html.RadioButton("soru2", "A") A
+<br />
+@Html.RadioButton("soru2", "B", true) B (seçili halde getirdik)

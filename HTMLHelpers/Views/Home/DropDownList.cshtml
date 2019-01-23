@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "DropDownList";
+}
+
+<h2>DropDownList</h2>
+
+
+@Html.DropDownList("cinsiyet",
+    new[]
+    {
+        new SelectListItem
+        {
+            Text = "Kadın",
+            Value = "1"
+        },
+        new SelectListItem
+        {
+            Text = "Erkek",
+            Value = "2"
+        }
+    }, "Seçim yapınız")
+
+
+<br /><br />
+
+
+@{ 
+    List<SelectListItem> isimler = new List<SelectListItem>()
+    {
+        new SelectListItem
+        {
+            Text = "ali",
+            Value = "1"
+        },
+        new SelectListItem
+        {
+            Text = "veli",
+            Value = "2"
+        },
+        new SelectListItem
+        {
+            Text = "ahmet",
+            Value = "3",
+            Selected = true
+        }
+    };
+}
+
+@Html.DropDownList("isimListesi", isimler)

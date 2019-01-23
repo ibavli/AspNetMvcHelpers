@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "TextBox";
+}
+
+<h2>TextBox</h2>
+
+<p>Html.TextBox("UrunAdi")</p>
+@Html.TextBox("UrunAdi")
+<br />
+<br />
+<p>Html.TextBox("UrunAdi", "Yazı..")</p>
+@Html.TextBox("UrunAdi", "Yazı..")
+<br />
+<br />
+<p>Html.TextBox("UrunAdi", "Yazı..", new { styyle = "color:red;font-weight:bold;"})</p>
+@Html.TextBox("UrunAdi", "Yazı..", new { @style = "color:red;font-weight:bold;" })
+
+<p>Parasak format</p>
+<br />
+<br />
+@Html.TextBox("UrunAdi", 1499.42, format: "{0:C2}")
+
+
+
+
