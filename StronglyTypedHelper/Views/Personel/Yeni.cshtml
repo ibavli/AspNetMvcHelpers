@@ -1,0 +1,81 @@
+﻿@model StronglyTypedHelper.Models.Personel
+
+@{
+    ViewBag.Title = "Yeni";
+}
+
+<h2>Yeni</h2>
+
+
+@using (Html.BeginForm())
+{
+<div class="form-horizontal">
+    <div class="form-group">
+        @Html.LabelFor(model => model.Ad, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Ad, new { @class = "col-md-10" })
+            @Html.ValidationMessageFor(model => model.Ad)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Soyad, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Soyad, new { @class = "col-md-10" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.DogumTarih, new { @class = "control-label col-md-2" })
+        <div class="col-md-10"></div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.TCKimlikNo, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.TCKimlikNo, new { @class = "col-md-10" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Cinsiyet, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.Cinsiyet, Model.Cinsiyetler)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.MedeniDurum, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.MedeniDurum, Model.MedeniDurumlar)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.CocukVarMi, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.CheckBoxFor(model => model.CocukVarMi)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.SakatlikDurumu, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.RadioButtonFor(model => model.SakatlikDurumu, 0) Sakatlığı yok
+            @Html.RadioButtonFor(model => model.SakatlikDurumu, 1) 1. Derece
+            @Html.RadioButtonFor(model => model.SakatlikDurumu, 2) 2. Derece
+            @Html.RadioButtonFor(model => model.SakatlikDurumu, 3) 3. Derece
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Sifre, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.PasswordFor(model => model.Sifre)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.DigerBilgiler, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(model => model.DigerBilgiler, new { @cols = 30, @rows = 5 })
+        </div>
+    </div>
+    <div class="form-group">       
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Kaydet" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
