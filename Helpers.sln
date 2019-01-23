@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTMLHelpers", "HTMLHelpers\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StronglyTypedHelper", "StronglyTypedHelper\StronglyTypedHelper.csproj", "{356B5741-5DE1-4561-BEF1-A30DCCA2F3A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomHtmlHelper", "CustomHtmlHelper\CustomHtmlHelper.csproj", "{18CD99F0-9961-4B61-BFF6-7B766C7672C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{356B5741-5DE1-4561-BEF1-A30DCCA2F3A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{356B5741-5DE1-4561-BEF1-A30DCCA2F3A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{356B5741-5DE1-4561-BEF1-A30DCCA2F3A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18CD99F0-9961-4B61-BFF6-7B766C7672C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18CD99F0-9961-4B61-BFF6-7B766C7672C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18CD99F0-9961-4B61-BFF6-7B766C7672C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18CD99F0-9961-4B61-BFF6-7B766C7672C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

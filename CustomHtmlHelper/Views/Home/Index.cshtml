@@ -1,0 +1,22 @@
+﻿@using CustomHtmlHelper.Models
+@using CustomHtmlHelper.MyExtensions
+@model List<MyMessages>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@Html.Alert("alert1", "danger", "Bu bir örnek yazıdır!")
+
+@foreach (MyMessages item in Model)
+{
+    @Html.AlertFor(Model => item, new { title = item.Text, level = item.Level })
+}
+
+@Html.CustomButton()
+
+<br />
+
+@Html.CustomButton("newTestId", "newTestName", "New Custom Button")
+
+
