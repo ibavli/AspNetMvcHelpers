@@ -1,0 +1,19 @@
+﻿@model List<WebHelperWebGrid.Models.Urun>
+
+@{
+    ViewBag.Title = "UrunListesiDefaultSort";
+}
+
+@{
+    var grid = new WebGrid(Model, defaultSort:"Ad");
+}
+
+<h3>Ad sütununa göre sırala dedik.</h3>
+<div>
+    @grid.GetHtml(
+columns: grid.Columns(
+   grid.Column("Ad", "Ürün Adı"),
+   grid.Column("Fiyat", "Ürün Fiyatı"),
+   grid.Column("Adet", "Stok Miktarı")))
+</div>
+

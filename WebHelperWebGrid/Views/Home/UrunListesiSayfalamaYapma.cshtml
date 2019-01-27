@@ -1,0 +1,20 @@
+﻿@model List<WebHelperWebGrid.Models.Urun>
+
+@{
+    ViewBag.Title = "UrunListesiSayfalamaYapma";
+}
+
+@{
+    var grid = new WebGrid(Model, rowsPerPage: 3);
+}
+
+<h3>Ad sütununa göre sırala dedik.</h3>
+<div>
+    @grid.GetHtml(
+    mode: WebGridPagerModes.All,
+    columns: grid.Columns(
+    grid.Column("Ad", "Ürün Adı"),
+    grid.Column("Fiyat", "Ürün Fiyatı"),
+    grid.Column("Adet", "Stok Miktarı")))
+</div>
+

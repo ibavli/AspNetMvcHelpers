@@ -1,0 +1,15 @@
+﻿@model List<WebHelperWebGrid.Models.Urun>
+
+@{
+    ViewBag.Title = "UrunListesi";
+}
+
+
+@{
+    var grid = new WebGrid(Model);
+}
+
+
+<div>@grid.GetHtml()</div>
+
+
